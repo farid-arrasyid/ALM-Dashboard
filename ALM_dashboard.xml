@@ -1,0 +1,3405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<rich-page>
+
+<field id="author">farid.rasyid</field>
+
+<field id="created">2025-02-25 12:30:14.839 +0900</field>
+
+
+-<field id="homePageContent" text-type="text/html">
+
+-<![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client19" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h1 style=&quot;text-align: center; font-size: 33px;color: #FFFFFF ;background-color: #4E80AB;&quot;&gt;Y25 LGERC DQA Software Issue Dashboard&lt;/h1&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <div id="polarion_client3" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;style&gt;
+	.cell {padding: 10px;width: 96px;}
+	.cell a:hover {text-decoration: none !important;} 
+	.square {border-radius: 6px;background-repeat: no-repeat;width: 126px; height: 96px; cursor:pointer;
+        background-image: url(&quot;$widgetContext.resourceUrl(&#39;resources/tileBackground.png&#39;)&quot;), url(&quot;/polarion/ria/images/backgrounds/btnTesting.png&quot;);
+	}
+	.count {height: 24px;padding-top: 33px; padding-bottom:10px;font-size: 44px;text-shadow: 1px 1px 0 white;line-height: 0;font-weight: bold;text-align: center;}
+	.option {text-shadow: 1px 1px 0 white;line-height: 1em;font-size: 11px;text-align: center;text-decoration: none;}
+&lt;/style&gt;
+
+&lt;h2 style=&quot;text-align: center;&quot;&gt;SoC vs Total Software Issue&lt;/h2&gt;
+
+#set($vk25lp = &quot;true&quot;)
+#set($vk24n = &quot;true&quot;)
+#set($vo22n3 = &quot;true&quot;)
+#set($vo24n = &quot;true&quot;)
+#set($query = &quot;type:testDefect&quot;) 
+#set($defectQuery = &quot;type:testDefect &quot;)
+#set($vscope = &quot;scope:TVwebOS25RelProjMgmt&quot;)
+
+&lt;table style=&quot;width: 100%; height:240px;&quot;&gt; 
+    &lt;tr&gt;
+		&lt;td style=&quot;width: 320px;&quot;&gt; 
+
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.multiSetPieChart&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id =&quot;title&quot;&gt;&lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K24n&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;K24n&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;#24698a&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K25Lp&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;K25Lp&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;#4088a7&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O22n3&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;O22n3&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;#5ca9c4&lt;/sub&gt;
+            &lt;sub id=&quot;showEachPercent&quot;&gt;true&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O24n&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;O24n&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;#78cae2&lt;/sub&gt;
+            &lt;sub id=&quot;showEachPercent&quot;&gt;true&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;showDataLabels&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;showZeroValues&quot;&gt;true&lt;/sub&gt;      
+    &lt;sub id=&quot;showDataTotalCount&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;showEachPercent&quot;&gt;true&lt;/sub&gt;    
+    &lt;sub id=&quot;advanced&quot;&gt;
+      &lt;sub id=&quot;height&quot;&gt;320&lt;/sub&gt;
+      &lt;sub id=&quot;width&quot;&gt;320&lt;/sub&gt;
+    &lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+        &lt;/td&gt;    
+       	&lt;td&gt;
+			&lt;table&gt;
+				&lt;tr&gt;
+                    ##Total
+                    #set($vCount = 0)
+                  
+                    #set($optionQuery =  &quot;$defectQuery AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                    #set($optionColor = &quot;#2C3238&quot;)
+					#set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+                    
+                    #set($idList =&quot;&quot;)
+                    #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                    #foreach($defectworkitemWI in $defectworkitemWIs)
+                        #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                        #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                        #if($idList == &quot;&quot;)
+                            #set($idList = $defectworkitemId)
+                        #else
+                            #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                        #end
+                    #end 
+                         
+                    ###set($count = 5)
+                    #if($viewStatus == &quot;&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	 
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&#39;square&#39; style=&#39;#if($viewStatus == &quot;&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  ###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;font-size: 18px;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;Total&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      Total
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;
+                    &lt;/td&gt;
+                    #if($vk25lp)
+                        #set($optionQuery = &quot;$defectQuery AND labels:ICSW AND InitialMR.KEY:Initial AND soc:K25Lp&quot;)
+                       
+                        #set($optionColor = &quot;#4088a7&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+                        
+                      
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                             #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                         #end 
+                         
+                        ## #set($count = 5)
+                        #if($viewStatus == &quot;K25Lp&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+
+						&lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;K25Lp&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;K25Lp&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;font-size: 18px;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;K25Lp&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      K25Lp
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;/a&gt;
+                    &lt;/td&gt;
+                    #end
+
+                    #if($vk24n)
+                        #set($optionQuery = &quot;$defectQuery AND labels:ICSW AND InitialMR.KEY:Initial AND  soc:K24n&quot;)
+                        #set($optionColor = &quot;#24698a&quot; )
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+                       
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                            #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                        #end
+                    
+                        ## #set($count = 5)
+                        #if($viewStatus == &quot;K24n&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;K24n&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;K24n&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;font-size: 18px;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;K24n&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      K24n
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;  
+                    &lt;/td&gt;
+                    #end
+                    
+                    #if($vo22n3)
+                        ###set($parmQuery2 = $parmQuery.replace(&quot;[parmStatus]&quot;,&quot;&#39;inProgress&#39;&quot;))
+                        ###set($optionQuery = &quot;type:wbs AND NOT wbsType:phase ${phase} AND status:($statusChk) AND SQL:($parmQuery2)&quot;)
+                        #set($optionQuery = &quot;$defectQuery AND labels:ICSW AND InitialMR.KEY:Initial AND  soc:O22n3&quot;)
+                        #set($optionColor = &quot;#5ca9c4&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+
+                        
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                            #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                        #end
+                        
+                        ###set($count = 5)
+                        #if($viewStatus == &quot;O22n3&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	 
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;O22n3&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;O22n3&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;font-size: 18px;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;O22n3&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      O22n3
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;  
+                    &lt;/td&gt;
+                    #end
+                    #if($vo24n)
+                        ###set($parmQuery2 = $parmQuery.replace(&quot;[parmStatus]&quot;,&quot;&#39;fixed&#39;&quot;))
+                        #set($optionQuery = &quot;$defectQuery AND labels:ICSW AND InitialMR.KEY:Initial AND  soc:O24n&quot;)
+                        #set($optionColor = &quot;#78cae2&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                            #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                        #end
+                        
+                        ###set($count = 5)
+                        #if($viewStatus == &quot;O24n&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	 
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;O24n&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;O24n&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;font-size: 18px;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;O24n&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      O24n
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;  
+                    &lt;/td&gt;
+                    #end
+				&lt;/tr&gt;
+			&lt;/table&gt;
+            ##&lt;div style=&quot;font-width:bold; color:#069; padding-left:20px;&quot;&gt;&lt;/div&gt;
+		&lt;/td&gt;
+    &lt;/tr&gt;
+ &lt;/table&gt;</sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client32" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;style&gt;
+	.cell {padding: 10px;width: 96px;}
+	.cell a:hover {text-decoration: none !important;} 
+	.square {border-radius: 6px;background-repeat: no-repeat;width: 126px; height: 96px; cursor:pointer;
+        background-image: url(&quot;$widgetContext.resourceUrl(&#39;resources/tileBackground.png&#39;)&quot;), url(&quot;/polarion/ria/images/backgrounds/btnTesting.png&quot;);
+	}
+	.count {height: 24px;padding-top: 33px; padding-bottom:10px;font-size: 44px;text-shadow: 1px 1px 0 white;line-height: 0;font-weight: bold;text-align: center;}
+	.option {text-shadow: 1px 1px 0 white;line-height: 1em;font-size: 11px;text-align: center;text-decoration: none;}
+&lt;/style&gt;
+
+&lt;h2 style=&quot;text-align: center;&quot;&gt;Status vs Total Software Issue&lt;/h2&gt;
+
+#set($vopen = &quot;true&quot;)
+#set($vreOpen = &quot;true&quot;)
+#set($vinProgress = &quot;true&quot;)
+#set($vfixed = &quot;true&quot;)
+#set($vclosed = &quot;true&quot;)
+#set($vmonitor = &quot;true&quot;)
+#set($query = &quot;type:testDefect&quot;) 
+#set($defectQuery = &quot;type:testDefect &quot;)
+
+
+&lt;table style=&quot;width: 100%; height:240px;&quot;&gt;
+    &lt;tr&gt;
+		&lt;td style=&quot;width: 320px;&quot;&gt; 
+
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;PieChartMultiWithStatistics&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id=&quot;title&quot;&gt;&lt;/sub&gt;&lt;sub id=&quot;paramFontColor&quot;&gt;&lt;/sub&gt;
+    &lt;sub id=&quot;donut&quot;&gt;false&lt;/sub&gt;
+    &lt;sub id=&quot;height&quot;&gt;240&lt;/sub&gt;
+    &lt;sub id=&quot;dataLabel&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;labelInside&quot;&gt;false&lt;/sub&gt;
+    &lt;sub id=&quot;withPercentage&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;withLegend&quot;&gt;false&lt;/sub&gt;
+    &lt;sub id=&quot;setLayout&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;vertical&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;setAlign&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;center&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;setVertical&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;bottom&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+       
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;InitialMR.KEY:Initial AND labels:ICSW AND status:open&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Open&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;red&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;InitialMR.KEY:Initial AND labels:ICSW AND status:reopen&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Re-Open&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;maroon&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;InitialMR.KEY:Initial AND labels:ICSW AND status:inProgress&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;In Progress&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;Orange&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+       
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;InitialMR.KEY:Initial AND labels:ICSW AND status:fixed&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Fixed&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;LawnGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;InitialMR.KEY:Initial AND labels:ICSW AND status:closed&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Closed&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;DarkGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;InitialMR.KEY:Initial AND labels:ICSW AND status:monitor&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Monitor&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#FED60A&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+        &lt;/td&gt;    
+       	&lt;td&gt;
+			&lt;table&gt;
+				&lt;tr&gt;
+                    ##Total
+                    #set($vCount = 0)
+                  
+                    #set($optionQuery =  &quot;$defectQuery AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                    #set($optionColor = &quot;#2C3238&quot;)
+					#set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+
+                    #set($idList =&quot;&quot;)
+                    #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                    #foreach($defectworkitemWI in $defectworkitemWIs)
+                        #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                        #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                        #if($idList == &quot;&quot;)
+                            #set($idList = $defectworkitemId)
+                        #else
+                            #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                        #end
+                    #end 
+                         
+                    ###set($count = 5)
+                    #if($viewStatus == &quot;&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	 
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&#39;square&#39; style=&#39;#if($viewStatus == &quot;&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  ###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;Total&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;img src=&quot;/polarion/icons/default/enums/testrun_type_loadtest.png&quot; class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      Total
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;
+                    &lt;/td&gt;
+                    #if($vopen)
+                        #set($optionQuery = &quot;$defectQuery AND status:open AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                        #set($optionColor = &quot;#069&quot;)
+                        #set($optionColor = &quot;Red&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+                        
+                      
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                             #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                         #end 
+                         
+                        ## #set($count = 5)
+                        #if($viewStatus == &quot;open&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+
+						&lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;open&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;open&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;Open&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;img src=&quot;/polarion/icons/default/enums/testrun_status_open1.png&quot; class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      Open
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;/a&gt;
+                    &lt;/td&gt;
+                    #end
+
+                    #if($vreOpen)
+                        #set($optionQuery = &quot;$defectQuery AND status:reopen AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                        #set($optionColor = &quot;#069&quot;)
+                        #set($optionColor = &quot;Maroon&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+
+                        
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                            #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                        #end
+                    
+                        ## #set($count = 5)
+                        #if($viewStatus == &quot;reOpen&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;reOpen&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;reOpen&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;Reopen&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;img src=&quot;/polarion/icons/default/enums/approval_waiting.gif&quot; class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      Reopen
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;  
+                    &lt;/td&gt;
+                    #end
+                    
+                    #if($vinProgress)
+                        ###set($parmQuery2 = $parmQuery.replace(&quot;[parmStatus]&quot;,&quot;&#39;inProgress&#39;&quot;))
+                        ###set($optionQuery = &quot;type:wbs AND NOT wbsType:phase ${phase} AND status:($statusChk) AND SQL:($parmQuery2)&quot;)
+                        #set($optionQuery = &quot;$defectQuery AND status:inProgress AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                        #set($optionColor = &quot;#FF7300&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+
+                        
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                            #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                        #end
+                        
+                        ###set($count = 5)
+                        #if($viewStatus == &quot;inProgress&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	 
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;inProgress&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;inProgress&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;In Progress&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;img src=&quot;/polarion/icons/default/enums/build_WAITING.png&quot; class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      In Progress
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;  
+                    &lt;/td&gt;
+                    #end
+                    #if($vfixed)
+                        ###set($parmQuery2 = $parmQuery.replace(&quot;[parmStatus]&quot;,&quot;&#39;fixed&#39;&quot;))
+                        #set($optionQuery = &quot;$defectQuery AND status:fixed AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                        #set($optionColor = &quot;#b83e3e&quot;)
+                        #set($optionColor = &quot;DarkGreen&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                            #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                        #end
+                        
+                        ###set($count = 5)
+                        #if($viewStatus == &quot;fixed&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	 
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;fixed&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;fixed&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;Fixed&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;img src=&quot;/polarion/icons/default/enums/type_work_package.png&quot; class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      Fixed
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;  
+                    &lt;/td&gt;
+                    #end
+                    #if($vclosed)
+                        ###set($parmQuery2 = $parmQuery.replace(&quot;[parmStatus]&quot;,&quot;&#39;closed&#39;&quot;))
+                        ###set($optionQuery = &quot;type:wbs AND NOT wbsType:phase ${phase} AND status:($statusChk) AND SQL:($parmQuery2)&quot;)
+                        #set($optionQuery = &quot;$defectQuery AND status:closed AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                        #set($optionColor = &quot;#b83e3e&quot;)
+                        #set($optionColor = &quot;DarkGreen&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                            #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                        #end
+                        
+                        ###set($count = 5)
+                        #if($viewStatus == &quot;closed&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;closed&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;closed&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;Closed&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;img src=&quot;/polarion/icons/default/enums/build_ABORTED.png&quot; class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      Closed
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;  
+                    &lt;/td&gt;
+                    #end
+                    #if($vmonitor)
+                        ###set($parmQuery2 = $parmQuery.replace(&quot;[parmStatus]&quot;,&quot;&#39;monitor&#39;&quot;))
+                        ###set($optionQuery = &quot;type:wbs AND NOT wbsType:phase ${phase} AND status:($statusChk) AND SQL:($parmQuery2)&quot;)
+                        #set($optionQuery = &quot;$defectQuery AND status:monitor AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                        #set($optionColor = &quot;#b83e3e&quot;)
+                        #set($optionColor = &quot;#FED60A&quot;)
+					    #set($count = $transaction.workItems().count().query(&quot;$optionQuery&quot;).result())
+
+                       
+                        #set($idList =&quot;&quot;)
+                        #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${optionQuery}&quot; ))
+                        #foreach($defectworkitemWI in $defectworkitemWIs)
+                            #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                            #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                            #if($idList == &quot;&quot;)
+                                #set($idList = $defectworkitemId)
+                            #else
+                                #set($idList = &quot;${idList} $defectworkitemId&quot;)
+                            #end
+                        #end
+                        
+                        ###set($count = 5)
+                        #if($viewStatus == &quot;monitor&quot;) #set($vCount = $count) #end
+                    &lt;td class=&quot;cell&quot;&gt;
+                    	 
+                    	###set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;$optionQuery&quot;))
+                        #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                        
+                        &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                          &lt;div class=&quot;square&quot; style=&#39;#if($viewStatus == &quot;NA&quot;) border:3px solid #BEC9D4; #end&#39; onclick=&quot;changeStatus(&#39;monitor&#39;)&quot;&gt;
+                              &lt;div class=&quot;count&quot; style=&quot;color: $optionColor;#if($count &gt; 99999)font-size: 26px;#elseif($count &gt; 9999)font-size: 32px;#elseif($count &gt; 999)font-size: 38px;#end&quot;&gt;
+                                  $count
+                              &lt;/div&gt;
+                              &lt;div class=&quot;option&quot; style=&quot;color: $optionColor;&quot;&gt;
+                                  &lt;span class=&quot;polarion-no-style-cleanup&quot; title=&quot;Monitor&quot;&gt;
+                                      &lt;span style=&quot;white-space:nowrap;&quot;&gt;&lt;img src=&quot;/polarion/icons/default/enums/req_status_awaiting_review.gif&quot; class=&quot;polarion-Icons polarion-no-style-cleanup&quot; onmousedown=&quot;return false;&quot; contenteditable=&quot;false&quot;&gt;&lt;/span&gt;
+                                      Monitor
+                                  &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/a&gt;  
+                    &lt;/td&gt;
+                    #end
+				&lt;/tr&gt;
+			&lt;/table&gt;
+            ##&lt;div style=&quot;font-width:bold; color:#069; padding-left:20px;&quot;&gt;&lt;/div&gt;
+		&lt;/td&gt;
+    &lt;/tr&gt;
+ &lt;/table&gt;</sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 25%;">
+  <div id="polarion_client105" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;K25Lp&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.multiSetPieChart&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id =&quot;title&quot;&gt;&lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+        
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K25Lp AND status:open&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Open&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Red&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K25Lp AND status:Reopen&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Reopen&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Maroon&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+       
+       &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K25Lp AND status:inProgress&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;In Progress&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Orange&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K25Lp AND status:monitor&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Monitoring&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Yellow&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K25Lp AND status:fixed&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Fixed&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;LawnGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K25Lp AND status:(closed) &lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Closed&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;DarkGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;showDataLabels&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;showZeroValues&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;advanced&quot;&gt;
+      &lt;sub id=&quot;height&quot;&gt;400&lt;/sub&gt;
+      &lt;sub id=&quot;width&quot;&gt;400&lt;/sub&gt;
+    &lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+        </sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-column" style="width: 25%;">
+  <div id="polarion_client107" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;K24n&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.multiSetPieChart&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id =&quot;title&quot;&gt;&lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K24n AND status:open&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Open&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Red&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;       
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K24n AND status:Reopen&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Reopen&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Maroon&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;    
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K24n AND status:inProgress&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;In Progress&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Orange&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K24n AND status:monitor&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Monitoring&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Yellow&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K24n AND status:fixed&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Fixed&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;LawnGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:K24n AND status:(closed) &lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Closed&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;DarkGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;showDataLabels&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;showZeroValues&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;advanced&quot;&gt;
+      &lt;sub id=&quot;height&quot;&gt;400&lt;/sub&gt;
+      &lt;sub id=&quot;width&quot;&gt;400&lt;/sub&gt;
+    &lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+        </sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-column" style="width: 25%;">
+  <div id="polarion_client110" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;O22n3&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.multiSetPieChart&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id =&quot;title&quot;&gt;&lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O22n3 AND status:open&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Open&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Red&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;       
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O22n3 AND status:Reopen&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Reopen&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Maroon&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;    
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O22n3 AND status:monitor&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Monitoring&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Yellow&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O22n3 AND status:inProgress&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;In Progress&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Orange&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O22n3 AND status:fixed&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Fixed&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;LawnGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O22n3 AND status:(closed) &lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Closed&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;DarkGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;showDataLabels&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;showZeroValues&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;advanced&quot;&gt;
+      &lt;sub id=&quot;height&quot;&gt;400&lt;/sub&gt;
+      &lt;sub id=&quot;width&quot;&gt;400&lt;/sub&gt;
+    &lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+        </sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-column" style="width: 25%;">
+  <div id="polarion_client112" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;O24n&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.multiSetPieChart&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id =&quot;title&quot;&gt;&lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O24n AND status:open&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Open&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Red&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;       
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O24n AND status:Reopen&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Reopen&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Maroon&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;    
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O24n AND status:monitor&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Monitoring&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Yellow&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O24n AND status:inProgress&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;In Progress&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;Orange&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        
+         &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O24n AND status:fixed&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Fixed&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;LawnGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND soc:O24n AND status:(closed) &lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;sectorName&quot;&gt;Closed&lt;/sub&gt;
+            &lt;sub id=&quot;sectorColor&quot;&gt;DarkGreen&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;showDataLabels&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;showZeroValues&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;advanced&quot;&gt;
+      &lt;sub id=&quot;height&quot;&gt;400&lt;/sub&gt;
+      &lt;sub id=&quot;width&quot;&gt;400&lt;/sub&gt;
+    &lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+        </sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client97"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 49.986298%;">
+  <div id="polarion_client40" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;Total Software Issue vs Defect Resolution&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;PieChartMultiWithStatistics&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+    &lt;sub id=&quot;paramFontColor&quot;&gt;${esc.h}22B14C&lt;/sub&gt;
+    &lt;sub id=&quot;donut&quot;&gt;false&lt;/sub&gt;
+    &lt;sub id=&quot;height&quot;&gt;400&lt;/sub&gt;
+    &lt;sub id=&quot;dataLabel&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;labelInside&quot;&gt;false&lt;/sub&gt;
+    &lt;sub id=&quot;withPercentage&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;withLegend&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;setLayout&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;horizontal&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;setAlign&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;center&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;setVertical&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;bottom&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+        
+        &lt;sub&gt;
+        &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND NOT HAS_VALUE:defectResolution.KEY&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;None&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#56763C&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;                
+        
+        &lt;sub&gt;
+        &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND defectResolution.KEY:Fixed&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Fixed&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#2D4100&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+        &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND defectResolution.KEY:Duplicated&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Duplicate&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#989432&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+        &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND defectResolution.KEY:CannotReproduce&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Cannot Reproduce&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#C8B250&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+        &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND defectResolution.KEY:NotaBug&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Not a Bug&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#E4CB7A&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+        &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND defectResolution.KEY:Deffered&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Deferred&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#DDAE06&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+        &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial AND defectResolution.KEY:Withdrawn&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Withdrawn&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#7F5228&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <div id="polarion_client53" class="polarion-rp-widget-part" data-widget="dynamicCountWithScript">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="workitems">
+        <sub id="elements">
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">testDefect</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">InitialMR.KEY:Initial AND labels:ICSW AND defectResolution.KEY:Fixed</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Fixed</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#2D4100</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">testDefect</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">InitialMR.KEY:Initial AND labels:ICSW AND defectResolution.KEY:Duplicated</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Duplicated</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#989432</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">testDefect</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">InitialMR.KEY:Initial AND labels:ICSW AND defectResolution.KEY:CannotReproduce</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Cannot Reproduce</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#C8B250</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">testDefect</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">InitialMR.KEY:Initial AND labels:ICSW AND defectResolution.KEY:NotaBug</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Not a Bug</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#E4CB7A</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">testDefect</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">InitialMR.KEY:Initial AND labels:ICSW AND defectResolution.KEY:Deffered</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Deferred</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#DDAE06</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">testDefect</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">InitialMR.KEY:Initial AND labels:ICSW AND defectResolution.KEY:Withdrawn</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Withdrawn</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#7F5228</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">testDefect</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">InitialMR.KEY:Initial AND labels:ICSW AND NOT HAS_VALUE:defectResolution.KEY</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">None</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#56763C</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+        </sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-column" style="width: 50.013702%;">
+  <div id="polarion_client44" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;Total Model vs Grade&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;PieChartMultiWithStatistics&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id=&quot;paramFontColor&quot;&gt;${esc.h}22B14C&lt;/sub&gt;
+    &lt;sub id=&quot;donut&quot;&gt;false&lt;/sub&gt;
+    &lt;sub id=&quot;height&quot;&gt;400&lt;/sub&gt;
+    &lt;sub id=&quot;dataLabel&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;labelInside&quot;&gt;false&lt;/sub&gt;
+    &lt;sub id=&quot;withPercentage&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;withLegend&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;setLayout&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;horizontal&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;setAlign&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;center&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;setVertical&quot;&gt;
+      &lt;sub id=&quot;values&quot;&gt;
+        &lt;sub&gt;bottom&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;sectors&quot;&gt;
+      &lt;sub id=&quot;elements&quot;&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped) AND ProjectGrade.KEY:Ca_MO&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Ca_MO&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#492E0B&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped) AND ProjectGrade.KEY:Cb_SW&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Cb_SW&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#8E3600&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+         &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped) AND ProjectGrade.KEY:Cb_HW&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Cb_HW&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#D05903&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+         &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped) AND ProjectGrade.KEY:Cb_MO&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Cb_MO&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#F56517&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+         &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped) AND ProjectGrade.KEY:Cb_MU&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Cb_MU&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#FDAB04&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped) AND ProjectGrade.KEY:Ca_HW&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Ca_HW&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#EEC5A2&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+        
+        &lt;sub&gt;
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+          &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+          &lt;sub id=&quot;luceneQuery&quot;&gt;author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped) AND ProjectGrade.KEY:Ca_MU&lt;/sub&gt;
+          &lt;sub id=&quot;children&quot;&gt;
+            &lt;sub id=&quot;paramTitle&quot;&gt;Ca_MU&lt;/sub&gt;
+            &lt;sub id=&quot;paramColor&quot;&gt;#EAD5B2&lt;/sub&gt;
+          &lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <div id="polarion_client58" class="polarion-rp-widget-part" data-widget="dynamicCountWithScript">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="workitems">
+        <sub id="elements">
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">projectInfoType2</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">ProjectGrade.KEY:Ca_MO AND NOT status:(cancelled dropped) AND author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein)</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Ca_MO</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#492E0B</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">projectInfoType2</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">ProjectGrade.KEY:Cb_SW AND NOT status:(cancelled dropped) AND author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein)</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Cb_SW</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#8E3600</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">projectInfoType2</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">ProjectGrade.KEY:Cb_HW AND NOT status:(cancelled dropped) AND author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein)</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Cb_HW</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#D05903</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">projectInfoType2</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">ProjectGrade.KEY:Cb_MO AND NOT status:(cancelled dropped) AND author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein)</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Cb_MO</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#F56517</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">projectInfoType2</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">ProjectGrade.KEY:Cb_MU AND NOT status:(cancelled dropped) AND author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein)</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Cb_MU</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#FDAB04</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">projectInfoType2</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">ProjectGrade.KEY:Ca_HW AND NOT status:(cancelled dropped) AND author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein)</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Ca_HW</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#EEC5A2</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+          <sub>
+            <sub id="scope">TVwebOS25RelProjMgmt</sub>
+            <sub id="prototype">WorkItem</sub>
+            <sub id="subtype">projectInfoType2</sub>
+            <sub id="queryType">lucene</sub>
+            <sub id="luceneQuery" style="white-space:pre;">ProjectGrade.KEY:Ca_MU AND NOT status:(cancelled dropped) AND author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein)</sub>
+            <sub id="children">
+              <sub id="script">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="counterFontSize">35px</sub>
+              <sub id="myTitle">Ca_MU</sub>
+              <sub id="subNameFontSize">12px</sub>
+              <sub id="myColor">#EAD5B2</sub>
+              <sub id="useLink">true</sub>
+              <sub id="addtionalURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+              <sub id="newURL">
+                <sub id="script" style="white-space:pre;"></sub>
+              </sub>
+            </sub>
+          </sub>
+        </sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client12" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;Total Issue Created during 1 Week&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;DualStackBarWithLine&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    
+    &lt;sub id=&quot;dataLabels&quot;&gt;false&lt;/sub&gt;
+    
+    &lt;sub id=&quot;isDual&quot;&gt;true&lt;/sub&gt;
+    
+    &lt;sub id=&quot;isStack&quot;&gt;true&lt;/sub&gt;
+    
+    &lt;sub id=&quot;dateField&quot;&gt;created&lt;/sub&gt;
+    
+    &lt;sub id=&quot;lineView&quot;&gt;true&lt;/sub&gt;
+    
+    &lt;sub id=&quot;lineType&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;lineName&quot;&gt;&lt;/sub&gt;&lt;sub id=&quot;leftLabel&quot;&gt;&lt;/sub&gt;&lt;sub id=&quot;leftSuffix&quot;&gt;&lt;/sub&gt;&lt;sub id=&quot;rightLabel&quot;&gt;&lt;/sub&gt;&lt;sub id=&quot;rightSuffix&quot;&gt;&lt;/sub&gt;
+      
+    &lt;sub id=&quot;sectors&quot;&gt;
+      
+      &lt;sub id=&quot;elements&quot;&gt;
+        
+        &lt;sub&gt;
+          
+          &lt;sub id=&quot;scope&quot;&gt;/&lt;/sub&gt;
+          
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          
+          &lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;
+          
+          &lt;sub id=&quot;luceneQuery&quot;&gt;${esc.h}set(${esc.d}projectId = &quot;&quot;)
+${esc.h}set(${esc.d}projects = ${esc.d}projectService.getProjectGroupForPath(&quot;/HE Company/HE R&amp;amp;D Lab&quot;).getDeepContainedProjects())
+${esc.h}foreach(${esc.d}project in ${esc.d}projects)
+    ${esc.h}set(${esc.d}projectId = &quot;${esc.d}{projectId} ${esc.d}project.id&quot;)
+${esc.h}end
+
+${esc.h}set(${esc.d}query = &quot;project.id:(${esc.d}projectId) AND type:qualficationTest&quot;)
+${esc.h}set(${esc.d}testRunIdList = &quot;==NA==&quot;)
+
+${esc.h}if(${esc.d}pageParameters.QualificationTestworkitem.toLucene.length  &amp;gt;  3)
+	${esc.h}set(${esc.d}qualificationTestworkitem = ${esc.d}!pageParameters.QualificationTestworkitem.toLucene)
+    ${esc.h}set(${esc.d}query = &quot;${esc.d}{query} AND id:${esc.d}qualificationTestworkitem &quot;)
+${esc.h}end 
+
+${esc.h}set(${esc.d}qualificationTestworkitemWIs = ${esc.d}transaction.workItems().search().query(&quot;${esc.d}{query}&quot; ))
+${esc.h}foreach(${esc.d}qualificationTestworkitemWI in ${esc.d}qualificationTestworkitemWIs)
+    ${esc.h}set(${esc.d}qualificationTestworkitemWIObj = ${esc.d}qualificationTestworkitemWI.getOldApi())
+	${esc.h}foreach(${esc.d}testRunId in ${esc.d}qualificationTestworkitemWIObj.getValue(&quot;testRunId&quot;))
+    	${esc.h}if(${esc.d}testRunIdList == &quot;==NA==&quot;)
+        	${esc.h}set(${esc.d}testRunIdList = &quot;${esc.d}testRunId.id&quot;)
+        ${esc.h}else
+        	${esc.h}set(${esc.d}testRunIdList = &quot;${esc.d}{testRunIdList} ${esc.d}testRunId.id&quot;)
+        ${esc.h}end
+        
+    ${esc.h}end
+${esc.h}end
+
+${esc.h}set(${esc.d}defectQuery = &quot;project.id:(${esc.d}projectId) AND type:testDefect  testDefectSeverity.KEY:critical AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+
+
+${esc.d}defectQuery&lt;/sub&gt;
+          
+          &lt;sub id=&quot;children&quot;&gt;
+            
+            &lt;sub id=&quot;setName&quot;&gt;Critical&lt;/sub&gt;
+            
+            &lt;sub id=&quot;sectorColor&quot;&gt;${esc.h}5B0A1A&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+        &lt;sub&gt;
+          
+          &lt;sub id=&quot;scope&quot;&gt;/&lt;/sub&gt;
+          
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          
+          &lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;
+          
+          &lt;sub id=&quot;luceneQuery&quot;&gt;${esc.h}set(${esc.d}projectId = &quot;&quot;)
+${esc.h}set(${esc.d}projects = ${esc.d}projectService.getProjectGroupForPath(&quot;/HE Company/HE R&amp;amp;D Lab&quot;).getDeepContainedProjects())
+${esc.h}foreach(${esc.d}project in ${esc.d}projects)
+    ${esc.h}set(${esc.d}projectId = &quot;${esc.d}{projectId} ${esc.d}project.id&quot;)
+${esc.h}end
+
+${esc.h}set(${esc.d}query = &quot;project.id:(${esc.d}projectId) AND type:qualficationTest&quot;)
+${esc.h}set(${esc.d}testRunIdList = &quot;==NA==&quot;)
+
+${esc.h}if(${esc.d}pageParameters.QualificationTestworkitem.toLucene.length  &amp;gt;  3)
+	${esc.h}set(${esc.d}qualificationTestworkitem = ${esc.d}!pageParameters.QualificationTestworkitem.toLucene)
+    ${esc.h}set(${esc.d}query = &quot;${esc.d}{query} AND id:${esc.d}qualificationTestworkitem &quot;)
+${esc.h}end 
+
+${esc.h}set(${esc.d}qualificationTestworkitemWIs = ${esc.d}transaction.workItems().search().query(&quot;${esc.d}{query}&quot; ))
+${esc.h}foreach(${esc.d}qualificationTestworkitemWI in ${esc.d}qualificationTestworkitemWIs)
+    ${esc.h}set(${esc.d}qualificationTestworkitemWIObj = ${esc.d}qualificationTestworkitemWI.getOldApi())
+	${esc.h}foreach(${esc.d}testRunId in ${esc.d}qualificationTestworkitemWIObj.getValue(&quot;testRunId&quot;))
+    	${esc.h}if(${esc.d}testRunIdList == &quot;==NA==&quot;)
+        	${esc.h}set(${esc.d}testRunIdList = &quot;${esc.d}testRunId.id&quot;)
+        ${esc.h}else
+        	${esc.h}set(${esc.d}testRunIdList = &quot;${esc.d}{testRunIdList} ${esc.d}testRunId.id&quot;)
+        ${esc.h}end
+        
+    ${esc.h}end
+${esc.h}end
+
+${esc.h}set(${esc.d}defectQuery = &quot;project.id:(${esc.d}projectId) AND type:testDefect  testDefectSeverity.KEY:major AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+
+
+${esc.d}defectQuery&lt;/sub&gt;
+          
+          &lt;sub id=&quot;children&quot;&gt;
+            
+            &lt;sub id=&quot;setName&quot;&gt;Major&lt;/sub&gt;
+            
+            &lt;sub id=&quot;sectorColor&quot;&gt;${esc.h}E93418&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+        &lt;sub&gt;
+          
+          &lt;sub id=&quot;scope&quot;&gt;/&lt;/sub&gt;
+          
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          
+          &lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;
+          
+          &lt;sub id=&quot;luceneQuery&quot;&gt;${esc.h}set(${esc.d}projectId = &quot;&quot;)
+${esc.h}set(${esc.d}projects = ${esc.d}projectService.getProjectGroupForPath(&quot;/HE Company/HE R&amp;amp;D Lab&quot;).getDeepContainedProjects())
+${esc.h}foreach(${esc.d}project in ${esc.d}projects)
+    ${esc.h}set(${esc.d}projectId = &quot;${esc.d}{projectId} ${esc.d}project.id&quot;)
+${esc.h}end
+
+${esc.h}set(${esc.d}query = &quot;project.id:(${esc.d}projectId) AND type:qualficationTest&quot;)
+${esc.h}set(${esc.d}testRunIdList = &quot;==NA==&quot;)
+
+${esc.h}if(${esc.d}pageParameters.QualificationTestworkitem.toLucene.length  &amp;gt;  3)
+	${esc.h}set(${esc.d}qualificationTestworkitem = ${esc.d}!pageParameters.QualificationTestworkitem.toLucene)
+    ${esc.h}set(${esc.d}query = &quot;${esc.d}{query} AND id:${esc.d}qualificationTestworkitem &quot;)
+${esc.h}end 
+
+${esc.h}set(${esc.d}qualificationTestworkitemWIs = ${esc.d}transaction.workItems().search().query(&quot;${esc.d}{query}&quot; ))
+${esc.h}foreach(${esc.d}qualificationTestworkitemWI in ${esc.d}qualificationTestworkitemWIs)
+    ${esc.h}set(${esc.d}qualificationTestworkitemWIObj = ${esc.d}qualificationTestworkitemWI.getOldApi())
+	${esc.h}foreach(${esc.d}testRunId in ${esc.d}qualificationTestworkitemWIObj.getValue(&quot;testRunId&quot;))
+    	${esc.h}if(${esc.d}testRunIdList == &quot;==NA==&quot;)
+        	${esc.h}set(${esc.d}testRunIdList = &quot;${esc.d}testRunId.id&quot;)
+        ${esc.h}else
+        	${esc.h}set(${esc.d}testRunIdList = &quot;${esc.d}{testRunIdList} ${esc.d}testRunId.id&quot;)
+        ${esc.h}end
+        
+    ${esc.h}end
+${esc.h}end
+
+${esc.h}set(${esc.d}defectQuery = &quot;project.id:(${esc.d}projectId) AND type:testDefect  testDefectSeverity.KEY:minor AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+
+
+${esc.d}defectQuery&lt;/sub&gt;
+          
+          &lt;sub id=&quot;children&quot;&gt;
+            
+            &lt;sub id=&quot;setName&quot;&gt;Minor&lt;/sub&gt;
+            
+            &lt;sub id=&quot;sectorColor&quot;&gt;${esc.h}E38700&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+        &lt;sub&gt;
+          
+          &lt;sub id=&quot;scope&quot;&gt;/&lt;/sub&gt;
+          
+          &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+          
+          &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+          
+          &lt;sub id=&quot;queryType&quot;&gt;luceneVelocity&lt;/sub&gt;
+          
+          &lt;sub id=&quot;luceneQuery&quot;&gt;${esc.h}set(${esc.d}projectId = &quot;&quot;)
+${esc.h}set(${esc.d}projects = ${esc.d}projectService.getProjectGroupForPath(&quot;/HE Company/HE R&amp;amp;D Lab&quot;).getDeepContainedProjects())
+${esc.h}foreach(${esc.d}project in ${esc.d}projects)
+    ${esc.h}set(${esc.d}projectId = &quot;${esc.d}{projectId} ${esc.d}project.id&quot;)
+${esc.h}end
+
+${esc.h}set(${esc.d}query = &quot;project.id:(${esc.d}projectId) AND type:qualficationTest&quot;)
+${esc.h}set(${esc.d}testRunIdList = &quot;==NA==&quot;)
+
+${esc.h}if(${esc.d}pageParameters.QualificationTestworkitem.toLucene.length  &amp;gt;  3)
+	${esc.h}set(${esc.d}qualificationTestworkitem = ${esc.d}!pageParameters.QualificationTestworkitem.toLucene)
+    ${esc.h}set(${esc.d}query = &quot;${esc.d}{query} AND id:${esc.d}qualificationTestworkitem &quot;)
+${esc.h}end 
+
+${esc.h}set(${esc.d}qualificationTestworkitemWIs = ${esc.d}transaction.workItems().search().query(&quot;${esc.d}{query}&quot; ))
+${esc.h}foreach(${esc.d}qualificationTestworkitemWI in ${esc.d}qualificationTestworkitemWIs)
+    ${esc.h}set(${esc.d}qualificationTestworkitemWIObj = ${esc.d}qualificationTestworkitemWI.getOldApi())
+	${esc.h}foreach(${esc.d}testRunId in ${esc.d}qualificationTestworkitemWIObj.getValue(&quot;testRunId&quot;))
+    	${esc.h}if(${esc.d}testRunIdList == &quot;==NA==&quot;)
+        	${esc.h}set(${esc.d}testRunIdList = &quot;${esc.d}testRunId.id&quot;)
+        ${esc.h}else
+        	${esc.h}set(${esc.d}testRunIdList = &quot;${esc.d}{testRunIdList} ${esc.d}testRunId.id&quot;)
+        ${esc.h}end
+        
+    ${esc.h}end
+${esc.h}end
+
+${esc.h}set(${esc.d}defectQuery = &quot;project.id:(${esc.d}projectId) AND type:testDefect  testDefectSeverity.KEY:comment AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+
+
+${esc.d}defectQuery&lt;/sub&gt;
+          
+          &lt;sub id=&quot;children&quot;&gt;
+            
+            &lt;sub id=&quot;setName&quot;&gt;Comment&lt;/sub&gt;
+            
+            &lt;sub id=&quot;sectorColor&quot;&gt;${esc.h}FEEB84&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+    &lt;sub id=&quot;myTimeAxis&quot;&gt;
+      
+      &lt;sub id=&quot;from&quot;&gt;
+        
+        &lt;sub id=&quot;relative&quot;&gt;-7&lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+      &lt;sub id=&quot;to&quot;&gt;
+        
+        &lt;sub id=&quot;relative&quot;&gt;0&lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+      &lt;sub id=&quot;scaleType&quot;&gt;day&lt;/sub&gt;
+      
+      &lt;sub id=&quot;baseDate&quot;&gt;1&lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <div id="polarion_client50" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;SoC vs Issue Status&lt;/h2&gt;
+&lt;sub id=&quot;title&quot;&gt;&lt;/sub&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;countTableMatrix&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+      &lt;sub id=&quot;extendQuery&quot;&gt;
+        &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+        &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+        &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+        &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND InitialMR.KEY:Initial&lt;/sub&gt;
+      &lt;/sub&gt;
+      &lt;sub id=&quot;separateRowBy&quot;&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;id&quot;&gt;soc&lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+      &lt;sub id=&quot;colSortby&quot;&gt;
+        &lt;sub id=&quot;values&quot;&gt;
+          &lt;sub&gt;asc&lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+      &lt;sub id=&quot;separateColumnBy&quot;&gt;
+        &lt;sub&gt;
+          &lt;sub id=&quot;id&quot;&gt;status&lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+      &lt;sub id=&quot;colSortOrder&quot;&gt;
+        &lt;sub id=&quot;values&quot;&gt;
+          &lt;sub&gt;colId&lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+      &lt;sub id=&quot;specColOrder&quot;&gt;&lt;/sub&gt;
+      &lt;sub id=&quot;showTotalCount&quot;&gt;true&lt;/sub&gt;
+      &lt;sub id=&quot;showRowTotalCount&quot;&gt;true&lt;/sub&gt;
+      &lt;sub id=&quot;showColumnTotalCount&quot;&gt;true&lt;/sub&gt;
+      &lt;sub id=&quot;showEachPercent&quot;&gt;true&lt;/sub&gt;
+      &lt;sub id=&quot;showQuery&quot;&gt;false&lt;/sub&gt;
+      &lt;sub id=&quot;showFilter&quot;&gt;false&lt;/sub&gt;
+      &lt;sub id=&quot;showRowCount&quot;&gt;true&lt;/sub&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+        </sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client46" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;SW PL vs Monthly Total Model Created&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;countTableMatrixInterval&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    &lt;sub id=&quot;extendQuery&quot;&gt;
+      &lt;sub id=&quot;scope&quot;&gt;TVwebOS25RelProjMgmt&lt;/sub&gt;
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+      &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+      &lt;sub id=&quot;luceneQuery&quot;&gt;author.id:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped)&lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;separateRowBy&quot;&gt;
+      &lt;sub&gt;
+        &lt;sub id=&quot;id&quot;&gt;project_pm&lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;separateColumnBy&quot;&gt;
+      &lt;sub id=&quot;dateField&quot;&gt;
+        &lt;sub id=&quot;values&quot;&gt;
+          &lt;sub&gt;created&lt;/sub&gt;
+        &lt;/sub&gt;
+      &lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;myTimeAxis&quot;&gt;
+      &lt;sub id=&quot;from&quot;&gt;
+        &lt;sub id=&quot;relative&quot;&gt;-365&lt;/sub&gt;
+      &lt;/sub&gt;
+      &lt;sub id=&quot;to&quot;&gt;
+        &lt;sub id=&quot;relative&quot;&gt;0&lt;/sub&gt;
+      &lt;/sub&gt;
+      &lt;sub id=&quot;scaleType&quot;&gt;month&lt;/sub&gt;
+      &lt;sub id=&quot;baseDate&quot;&gt;1&lt;/sub&gt;
+    &lt;/sub&gt;
+    &lt;sub id=&quot;showTotalCount&quot;&gt;true&lt;/sub&gt;
+    &lt;sub id=&quot;showEachPercent&quot;&gt;false&lt;/sub&gt;
+    &lt;sub id=&quot;showQuery&quot;&gt;false&lt;/sub&gt;
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client8" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;SW PL vs Model Development Grade&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;countTableMatrix&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    
+    &lt;sub id=&quot;extendQuery&quot;&gt;
+      
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      
+      &lt;sub id=&quot;subtype&quot;&gt;projectInfoType2&lt;/sub&gt;
+      
+      &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+      
+      &lt;sub id=&quot;luceneQuery&quot;&gt;project_pm.KEY:(abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein) AND NOT status:(cancelled dropped)&lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+    &lt;sub id=&quot;separateRowBy&quot;&gt;
+      
+      &lt;sub&gt;
+        
+        &lt;sub id=&quot;id&quot;&gt;project_pm&lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+    &lt;sub id=&quot;colSortby&quot;&gt;
+      
+      &lt;sub id=&quot;values&quot;&gt;
+        
+        &lt;sub&gt;asc&lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+    &lt;sub id=&quot;separateColumnBy&quot;&gt;
+      
+      &lt;sub&gt;
+        
+        &lt;sub id=&quot;id&quot;&gt;ProjectGrade&lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+    &lt;sub id=&quot;colSortOrder&quot;&gt;
+      
+      &lt;sub id=&quot;values&quot;&gt;
+        
+        &lt;sub&gt;colId&lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    &lt;sub id=&quot;specColOrder&quot;&gt;&lt;/sub&gt;
+      
+    &lt;sub id=&quot;showTotalCount&quot;&gt;true&lt;/sub&gt;
+    
+    &lt;sub id=&quot;showRowTotalCount&quot;&gt;true&lt;/sub&gt;
+    
+    &lt;sub id=&quot;showColumnTotalCount&quot;&gt;true&lt;/sub&gt;
+    
+    &lt;sub id=&quot;showEachPercent&quot;&gt;false&lt;/sub&gt;
+    
+    &lt;sub id=&quot;showQuery&quot;&gt;false&lt;/sub&gt;
+    
+    &lt;sub id=&quot;showFilter&quot;&gt;false&lt;/sub&gt;
+    
+    &lt;sub id=&quot;showRowCount&quot;&gt;true&lt;/sub&gt;
+    
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_9" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;Detail History Software Issue separated by SW PL&lt;/h2&gt;
+
+&lt;h5&gt;sort by Latest Created Date (please add Label &quot;ICSW&quot; on issue page)&lt;/h5&gt;
+
+#set($projectId = &quot;&quot;)
+#set($projects = $projectService.getProjectGroupForPath(&quot;/HE Company/HE R&amp;D Lab&quot;).getDeepContainedProjects())
+#foreach($project in $projects)
+    #set($projectId = &quot;${projectId} $project.id&quot;)
+#end
+
+#set($query = &quot;project.id:($projectId) AND type:qualficationTest AND author.id:(andriyana.saputra abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein bintang.buana devi.swadaya shinta.puspitasari)&quot;)
+#set($testRunIdList = &quot;&quot;)
+
+#if($pageParameters.QualificationTestworkitem.toLucene.length  &gt;  3)
+	#set($qualificationTestworkitem = $!pageParameters.QualificationTestworkitem.toLucene)
+    
+#end 
+
+#set($qualificationTestworkitemWIs = $transaction.workItems().search().query(&quot;${query}&quot; ))
+#set($resultCountMap = $objectFactory.newMap())
+#set($resultMap = $objectFactory.newMap()) 
+
+&lt;div class=&quot;table_scroll_section&quot;&gt;	
+    &lt;div class=&quot;singlex_table_outer&quot;&gt;
+		&lt;table&gt;
+			&lt;colgroup&gt;
+				&lt;col width=&quot;2%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+ 				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+			&lt;/colgroup&gt;
+			&lt;thead&gt;
+				&lt;tr&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;No.&lt;/th&gt;
+					&lt;th colspan=&quot;4&quot;&gt;Qualification Test Info&lt;/th&gt;
+					&lt;th colspan=&quot;12&quot;&gt;Issue&lt;/th&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+                    &lt;th&gt;Project Name&lt;/th&gt;
+                    &lt;th&gt;SW PL&lt;/th&gt;
+					&lt;th&gt;DQA MM&lt;/th&gt;
+					&lt;th&gt;Title&lt;/th&gt;
+					&lt;th&gt;ID&lt;/th&gt;
+                    &lt;th&gt;Build Number&lt;/th&gt;
+                    &lt;th&gt;SoC&lt;/th&gt;
+                    &lt;th&gt;Fixed Build Number&lt;/th&gt;
+                    &lt;th&gt;Status&lt;/th&gt;
+                    &lt;th&gt;Defect Resolution&lt;/th&gt;
+					&lt;th&gt;Severity&lt;/th&gt;
+                    &lt;th&gt;Created&lt;/th&gt;
+                    &lt;th&gt;Due date&lt;/th&gt;                    
+					&lt;th&gt;Assignee&lt;/th&gt;
+                    &lt;th&gt;DQA Tester&lt;/th&gt;
+				&lt;/tr&gt;
+			&lt;/thead&gt;
+            
+			&lt;tbody&gt;
+				#set($rowIndex = 0)
+                #foreach($qualificationTestworkitemWI in $qualificationTestworkitemWIs)
+                   #set($qualificationTestworkitemWIObj = $qualificationTestworkitemWI.getOldApi())
+			
+					#set($qualificationTestProjectName = $qualificationTestworkitemWIObj.getValue(&quot;title&quot;))
+					#set($qualificationTestName = $qualificationTestworkitemWIObj.getValue(&quot;assignee.id&quot;))
+                    
+                    #set($testRunIdList = &quot;&quot;)                 
+                    #foreach($testRunId in $qualificationTestworkitemWIObj.getValue(&quot;testRunId&quot;))
+                            #if($testRunIdList == &quot;&quot;)
+                                #set($testRunIdList = &quot;$testRunId.id&quot;)
+                            #else
+                                #set($testRunIdList = &quot;${testRunIdList} $testRunId.id&quot;)
+                            #end
+					#end
+                            
+                    #set($defectQuery = &quot;type:testDefect AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                    #set($defectQuery = &quot;${defectQuery} AND testRunId.KEY:($testRunIdList)&quot;)
+                    #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${defectQuery}&quot; ))
+                    #foreach($defectworkitemWI in $defectworkitemWIs)
+                      #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                      #set($defectworkitemStatus = $!defectworkitemWI.fields().status().optionId())
+                      #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                              
+                      #set($testDefectTitle = $!defectworkitemWIObj.getValue(&quot;title&quot;)) 
+                      #set($testDefectBuildNumber = $qualificationTestworkitemWIObj.getValue(&quot;BuildVersion&quot;))
+                      #set($testDefectFixedBuildNumber = &quot;-&quot;)
+                      #set($testDefectFixedBuildNumber = $!defectworkitemWIObj.getValue(&quot;FixBuildNumber&quot;)) 
+
+                      #set($testDefectSoC = $!defectworkitemWIObj.getValue(&quot;soc&quot;)) 
+					  
+                      
+					  #set($testDefectStatus = $!defectworkitemWIObj.getValue(&quot;status&quot;).id)
+					  #set($testDefectStatus = $!defectworkitemWIObj.getValue(&quot;&quot;).id)
+                       
+					  #set($testdefectResolution = $!defectworkitemWIObj.getValue(&quot;defectResolution&quot;).id)
+					  #set($testDefectSeverity = $!defectworkitemWIObj.getValue(&quot;testDefectSeverity&quot;).id)
+                      ###set($testDefectAssignee = $!defectworkitemWIObj.getValue(&quot;assignee&quot;))
+                      #set($testDefectAssignee = &quot;&quot;)
+                      #set($testDefectAssigneeDept = &quot;&quot;)
+
+                      #set($isBreak = false)
+                      #foreach($assignee in $!defectworkitemWIObj.getAssignees())
+                        #if(!$assignee.isUnresolvable() &amp;&amp; $isBreak == false)
+                          #set($deptName = $!assignee.getDescription().getContent())
+                          
+                          #if($deptName.indexOf(&quot;/&quot;, 1) != -1)
+                            #set($testDefectAssignee = $assignee)
+                            #set($testDefectAssigneeDept =$deptName.substring($math.add($deptName.indexOf(&quot;/&quot;, 1),  1),  $deptName.length))
+                          #end
+                          
+                          #set($isBreak = true)
+                        #end
+                      #end
+
+                      #set($testDefectAuthor = $!defectworkitemWIObj.getValue(&quot;author&quot;))     
+                      #set($testDefectCreated = $!defectworkitemWIObj.getValue(&quot;created&quot;))
+
+                      #set($testDefectDueDate = &quot;TBD&quot;)
+                      #set($testDefectDueDate = $!defectworkitemWIObj.getValue(&quot;dueDate&quot;)) 
+
+                        
+                      &lt;tr&gt;
+                      &lt;td style=&quot;text-align: center;&quot;&gt; $math.add($rowIndex	, 1)&lt;/td&gt;
+ 
+                      &lt;td style=&quot;text-align: center;&quot;&gt; $qualificationTestworkitemWI.fields().id().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+                      &lt;td &gt; $qualificationTestProjectName&lt;/td&gt;
+                      &lt;td style=&quot;text-align: center;&quot;&gt; $qualificationTestworkitemWI.fields().author().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+					  &lt;td style=&quot;text-align: center;&quot;&gt; $qualificationTestworkitemWI.fields().assignee().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+
+                      &lt;td &gt;$testDefectTitle&lt;/td&gt;            
+                      &lt;td style=&quot;text-align: center;&quot;&gt; $defectworkitemWI.fields().id().render().withLinks().openLinksInNewWindow() &lt;/td&gt;  
+                      &lt;td style=&quot;text-align: center;&quot;&gt;$testDefectBuildNumber&lt;/td&gt;
+                      &lt;td style=&quot;text-align: center;&quot;&gt;$testDefectSoC&lt;/td&gt;
+                      &lt;td style=&quot;text-align: center;&quot;&gt;$testDefectFixedBuildNumber&lt;/td&gt;
+                      &lt;td style=&quot;text-align: center;#if($testDefectStatus == &quot;open&quot;) background-color: red ;#elseif($testDefectStatus == &quot;Reopen&quot;) background-color: Maroon;#elseif($testDefectStatus == &quot;inProgress&quot;) background-color: Orange;#elseif($testDefectStatus == &quot;monitor&quot;) background-color: Yellow; #elseif($testDefectStatus == &quot;fixed&quot;) background-color: LawnGreen; #elseif($testDefectStatus == &quot;closed&quot;) background-color: DarkGreen; #end&quot;&gt;$testDefectStatus&lt;/td&gt;
+					  
+					  &lt;td style=&quot;text-align: center;&quot;&gt;$testdefectResolution&lt;/td&gt;
+                      &lt;td style=&quot;text-align: center;&quot;&gt;$testDefectSeverity&lt;/td&gt;
+                      &lt;td style=&quot;text-align: center;&quot;&gt;$date.format(&#39;yyyy-MM-dd&#39;, $testDefectCreated)&lt;/td&gt;
+                      &lt;td style=&quot;text-align: center;&quot;&gt;$testDefectDueDate&lt;/td&gt;
+                      &lt;td&gt; $defectworkitemWI.fields().assignee().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+					  &lt;td&gt; $defectworkitemWI.fields().author().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+                      &lt;/tr&gt;
+                      #set($rowIndex = $rowIndex + 1)
+                    #end
+                #end
+            &lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;script src=&quot;//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.2/dist/jquery.table2excel.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+jQuery(document).ready(function(){
+ 
+    $(&quot;.singlex_table_outer &gt;table &gt;tbody &gt; tr&quot;).each(function() {
+    	   
+       //$(this).children(&quot;td:eq(0)&quot;).text(&quot;test&quot;);   
+    	var str = $(this).children(&quot;td:eq(5)&quot;).text();
+        console.log(str)
+        //$(this).children(&quot;td:eq(0)&quot;).text(&quot;test&quot;); 
+        var desc=&quot;&quot;
+        //var arr = str.split(&quot;\n&quot;);
+        var arr = str.split(&quot;■&quot;);
+
+        if (arr.length &lt;=4) {
+        	desc = arr[0];
+        }
+        else{
+        	//desc = arr[0] + arr[1] + arr[2] + arr[3] + arr[4]  + + arr[5] + + arr[6] + arr[7] + arr[8] + arr[9] +  arr[10]
+            //desc =  arr[10] + &quot;&lt;br&gt;&quot;+arr[11];
+            desc =  arr[1] + &quot;&lt;br&gt;&quot;+arr[2] + &quot;&lt;br&gt;&quot;+arr[3];
+        }
+        //desc = arr[0] 
+        //cleanr = re.compile(&#39;&lt;.*?&gt;&#39;)
+    	//inner_text = re.sub(cleanr, &#39;&#39;, str)
+    
+    	//var arr = inner_text.split(&quot;\n&quot;);
+        
+    	//$(this).children(&quot;td:eq(5)&quot;).text(arr));
+        //var desc = arr[1];
+        //$(this).children(&quot;td:eq(5)&quot;).text(inner_text);
+        $(this).children(&quot;td:eq(5)&quot;).html(desc);
+        //var prVal = $(this).children(&quot;td:eq(0)&quot;).html();
+        //var prId = $(this).children(&quot;td:eq(0)&quot;).text();
+       // prVal = prVal.replace(&quot;span&gt;&quot; + prId, &quot;span&gt;&quot; + $(this).children(&quot;td:eq(1)&quot;).text());
+        //$(this).children(&quot;td:eq(1)&quot;).html(prVal);
+    });
+
+});
+&lt;/script&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client2"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client29" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;Model vs Issue History&lt;/h2&gt;
+
+&lt;h5&gt;A.  Event Sequence  [1st] (sort by Latest Created Date)&lt;/h5&gt;
+
+#set($projectId = &quot;&quot;)
+#set($projects = $projectService.getProjectGroupForPath(&quot;/HE Company/HE R&amp;D Lab/webOS 25&quot;).getDeepContainedProjects())
+#foreach($project in $projects)
+    #set($projectId = &quot;${projectId} $project.id&quot;)
+#end
+
+#set($query = &quot;project.id:($projectId) AND type:qualficationTest AND eventSequence.KEY:1 AND author.id:(andriyana.saputra abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein bintang.buana devi.swadaya shinta.puspitasari)&quot;)
+#set($testRunIdList = &quot;&quot;)
+
+#if($pageParameters.QualificationTestworkitem.toLucene.length  &gt;  3)
+	#set($qualificationTestworkitem = $!pageParameters.QualificationTestworkitem.toLucene)
+#end 
+
+#set($qualificationTestworkitemWIs = $transaction.workItems().search().query(&quot;${query}&quot; ))
+#set($resultCountMap = $objectFactory.newMap())
+#set($resultMap = $objectFactory.newMap()) 
+
+&lt;div class=&quot;table_scroll_section&quot;&gt;	
+    &lt;div class=&quot;singlex_table_outer&quot;&gt;
+		&lt;table&gt;
+			&lt;colgroup&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;8%&quot;&gt;
+				&lt;col width=&quot;*&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+			&lt;/colgroup&gt;
+			&lt;thead&gt;
+				&lt;tr&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;No.&lt;/th&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;ID&lt;/th&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;Qualification Test&lt;/th&gt;
+                   &lt;th rowspan=&quot;2&quot;&gt;SW PL&lt;/th&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;DQA MM&lt;/th&gt;
+                    &lt;th rowspan=&quot;2&quot;&gt;Created&lt;/th&gt;
+                   &lt;th rowspan=&quot;2&quot;&gt;Event Sequence&lt;/th&gt;
+                    &lt;th rowspan=&quot;2&quot;&gt;Status&lt;/th&gt;
+					
+					&lt;th colspan=&quot;7&quot;&gt;Issue&lt;/th&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;th&gt;Open&lt;/th&gt;
+					&lt;th&gt;In Progress&lt;/th&gt;
+					&lt;th&gt;Reopen&lt;/th&gt;
+					&lt;th&gt;Fixed&lt;/th&gt;
+					&lt;th&gt;Closed&lt;/th&gt;
+					&lt;th&gt;Monitor&lt;/th&gt;
+                    &lt;th&gt;Total&lt;/th&gt;
+				&lt;/tr&gt;
+			&lt;/thead&gt;
+			&lt;tbody&gt;
+				#set($rowIndex = 0)
+                #foreach($qualificationTestworkitemWI in $qualificationTestworkitemWIs)
+                    #set($qualificationTestworkitemWIObj = $qualificationTestworkitemWI.getOldApi())
+                    #set($qualificationTestId = $qualificationTestworkitemWIObj.getValue(&quot;id&quot;))
+                    #set($qualificationTestName = $qualificationTestworkitemWIObj.getValue(&quot;title&quot;))
+                    #set($qualificationTestStatus = $!qualificationTestworkitemWIObj.getValue(&quot;status&quot;).id)
+                    #set($qualificationTestCreated = $qualificationTestworkitemWIObj.getValue(&quot;created&quot;))
+                    #set($qualificationTestEventSeq = $!qualificationTestworkitemWIObj.getValue(&quot;eventSequence&quot;))
+
+                    #set($ret = $resultCountMap.put(&quot;open&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;inProgress&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;reopen&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;fixed&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;closed&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;monitor&quot;, 0))
+					#set($ret = $resultCountMap.put(&quot;total&quot;, 0))
+                    
+                    #set($ret = $resultMap.put(&quot;open&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;inProgress&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;reopen&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;fixed&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;closed&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;monitor&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;total&quot;, &quot;&quot;))
+                    
+                    #set($testRunIdList = &quot;&quot;)
+                    
+                    #foreach($testRunId in $qualificationTestworkitemWIObj.getValue(&quot;testRunId&quot;))
+                            #if($testRunIdList == &quot;&quot;)
+                                #set($testRunIdList = &quot;$testRunId.id&quot;)
+                            #else
+                                #set($testRunIdList = &quot;${testRunIdList} $testRunId.id&quot;)
+                            #end
+              		#end
+                    
+                    #set($defectQuery = &quot;type:testDefect AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                    #set($defectQuery = &quot;${defectQuery} AND testRunId.KEY:($testRunIdList)&quot;)
+                    #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${defectQuery}&quot; ))
+
+                    #foreach($defectworkitemWI in $defectworkitemWIs)
+                      #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                      #set($defectworkitemStatus = $!defectworkitemWI.fields().status().optionId())
+                      #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                      #set($testDefectSeverity = $!defectworkitemWIObj.getValue(&quot;testDefectSeverity&quot;).id)
+
+                      #if($defectworkitemStatus == &quot;open&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;open&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;open&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;inProgress&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;inProgress&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;inProgress&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;reopen&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;reopen&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;reopen&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;fixed&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;fixed&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;fixed&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;closed&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;closed&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;closed&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;monitor&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;monitor&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;monitor&quot;, $tmpCnt))
+                      #end
+                      #set($defectId = $resultMap.get(&quot;${defectworkitemStatus}&quot;))
+                      #set($defectId = &quot;${defectId} $defectworkitemId&quot;)
+                      #set($ret = $resultMap.put(&quot;${defectworkitemStatus}&quot;, &quot;$defectId&quot;))
+
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;total&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;total&quot;, $tmpCnt))
+                      #set($defectId = $resultMap.get(&quot;total&quot;))
+                      #set($defectId = &quot;${defectId} $defectworkitemId&quot;)
+                      #set($ret = $resultMap.put(&quot;total&quot;, &quot;$defectId&quot;))                                
+                    #end
+                	&lt;tr&gt;
+                    	&lt;td&gt; $math.add($rowIndex, 1)&lt;/td&gt;
+                        &lt;td&gt; $qualificationTestworkitemWI.fields().id().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+                        &lt;td style=&quot;text-align: left;&quot;&gt; $qualificationTestName &lt;/td&gt;
+                        &lt;td style=&quot;text-align: center;&quot;&gt; $qualificationTestworkitemWI.fields().author().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+					    &lt;td style=&quot;text-align: center;&quot;&gt; $qualificationTestworkitemWI.fields().assignee().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+                       &lt;td style=&quot;text-align: center;&quot;&gt;$date.format(&#39;yyyy-MM-dd&#39;, $qualificationTestCreated)&lt;/td&gt;
+                       
+                       &lt;td style=&quot;text-align: center;#if($qualificationTestEventSeq == 2) background-color: #E8E8E8 ; #end&quot;&gt;$qualificationTestEventSeq&lt;/td&gt;
+                        &lt;td style=&quot;text-align: center;#if($qualificationTestStatus == &quot;open&quot;) background-color: orange ;#elseif($qualificationTestStatus == &quot;Reopen&quot;) background-color: orange;#elseif($qualificationTestStatus == &quot;request&quot;) background-color: Orange;#elseif($qualificationTestStatus == &quot;receipt&quot;) background-color: orange; #elseif($qualificationTestStatus == &quot;plan&quot;) background-color: orange; #elseif($qualificationTestStatus == &quot;testing&quot;) background-color: orange; #elseif($qualificationTestStatus == &quot;result&quot;) background-color: orange; #elseif($qualificationTestStatus == &quot;review&quot;) background-color: orange;#elseif($qualificationTestStatus == &quot;inApproval&quot;) background-color: orange; #end&quot;&gt;$qualificationTestStatus&lt;/td&gt;
+                       
+                                            
+                        
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;open&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;open&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;open&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;inProgress&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;inProgress&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;inProgress&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;reopen&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;reopen&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;reopen&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;fixed&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;fixed&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;fixed&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;closed&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;closed&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;closed&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;monitor&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;monitor&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;monitor&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;total&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;total&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;total&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;                             
+                    &lt;/tr&gt;
+                    #set($rowIndex = $rowIndex + 1)
+                #end
+            &lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_11"></p>
+  <div id="polarion_client10" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h5&gt;A.  Event Sequence  [2nd] (sort by Latest Created Date)&lt;/h5&gt;
+
+#set($projectId = &quot;&quot;)
+#set($projects = $projectService.getProjectGroupForPath(&quot;/HE Company/HE R&amp;D Lab/webOS 25&quot;).getDeepContainedProjects())
+#foreach($project in $projects)
+    #set($projectId = &quot;${projectId} $project.id&quot;)
+#end
+
+#set($query = &quot;project.id:($projectId) AND type:qualficationTest AND eventSequence.KEY:2 AND author.id:(andriyana.saputra abriyan.yusuf daniel.lumbantoruan desi.fatimah evi.yuliani fachri15.adhiatma farid.rasyid hamdan.romadhona alfis.ramadhan fira.vasmaulidzra shafina.zein bintang.buana devi.swadaya shinta.puspitasari)&quot;)
+#set($testRunIdList = &quot;&quot;)
+
+#if($pageParameters.QualificationTestworkitem.toLucene.length  &gt;  3)
+	#set($qualificationTestworkitem = $!pageParameters.QualificationTestworkitem.toLucene)
+#end 
+
+#set($qualificationTestworkitemWIs = $transaction.workItems().search().query(&quot;${query}&quot; ))
+#set($resultCountMap = $objectFactory.newMap())
+#set($resultMap = $objectFactory.newMap()) 
+
+&lt;div class=&quot;table_scroll_section&quot;&gt;	
+    &lt;div class=&quot;singlex_table_outer&quot;&gt;
+		&lt;table&gt;
+			&lt;colgroup&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;8%&quot;&gt;
+				&lt;col width=&quot;*&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+                &lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+				&lt;col width=&quot;5%&quot;&gt;
+			&lt;/colgroup&gt;
+			&lt;thead&gt;
+				&lt;tr&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;No.&lt;/th&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;ID&lt;/th&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;Qualification Test&lt;/th&gt;
+                   &lt;th rowspan=&quot;2&quot;&gt;SW PL&lt;/th&gt;
+					&lt;th rowspan=&quot;2&quot;&gt;DQA MM&lt;/th&gt;
+                    &lt;th rowspan=&quot;2&quot;&gt;Created&lt;/th&gt;
+                   &lt;th rowspan=&quot;2&quot;&gt;Event Sequence&lt;/th&gt;
+                    &lt;th rowspan=&quot;2&quot;&gt;Status&lt;/th&gt;
+					
+					&lt;th colspan=&quot;7&quot;&gt;Issue&lt;/th&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;th&gt;Open&lt;/th&gt;
+					&lt;th&gt;In Progress&lt;/th&gt;
+					&lt;th&gt;Reopen&lt;/th&gt;
+					&lt;th&gt;Fixed&lt;/th&gt;
+					&lt;th&gt;Closed&lt;/th&gt;
+					&lt;th&gt;Monitor&lt;/th&gt;
+                    &lt;th&gt;Total&lt;/th&gt;
+				&lt;/tr&gt;
+			&lt;/thead&gt;
+			&lt;tbody&gt;
+				#set($rowIndex = 0)
+                #foreach($qualificationTestworkitemWI in $qualificationTestworkitemWIs)
+                    #set($qualificationTestworkitemWIObj = $qualificationTestworkitemWI.getOldApi())
+                    #set($qualificationTestId = $qualificationTestworkitemWIObj.getValue(&quot;id&quot;))
+                    #set($qualificationTestName = $qualificationTestworkitemWIObj.getValue(&quot;title&quot;))
+                    #set($qualificationTestStatus = $!qualificationTestworkitemWIObj.getValue(&quot;status&quot;).id)
+                    #set($qualificationTestEventSeq = $!qualificationTestworkitemWIObj.getValue(&quot;eventSequence&quot;))
+                    #set($qualificationTestCreated = $qualificationTestworkitemWIObj.getValue(&quot;created&quot;))
+
+                    #set($ret = $resultCountMap.put(&quot;open&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;inProgress&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;reopen&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;fixed&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;closed&quot;, 0))
+                    #set($ret = $resultCountMap.put(&quot;monitor&quot;, 0))
+					#set($ret = $resultCountMap.put(&quot;total&quot;, 0))
+                    
+                    #set($ret = $resultMap.put(&quot;open&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;inProgress&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;reopen&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;fixed&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;closed&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;monitor&quot;, &quot;&quot;))
+                    #set($ret = $resultMap.put(&quot;total&quot;, &quot;&quot;))
+                    
+                    #set($testRunIdList = &quot;&quot;)
+                    
+                    #foreach($testRunId in $qualificationTestworkitemWIObj.getValue(&quot;testRunId&quot;))
+                            #if($testRunIdList == &quot;&quot;)
+                                #set($testRunIdList = &quot;$testRunId.id&quot;)
+                            #else
+                                #set($testRunIdList = &quot;${testRunIdList} $testRunId.id&quot;)
+                            #end
+              		#end
+                    
+                    #set($defectQuery = &quot;type:testDefect AND labels:ICSW AND InitialMR.KEY:Initial&quot;)
+                    #set($defectQuery = &quot;${defectQuery} AND testRunId.KEY:($testRunIdList)&quot;)
+                    #set($defectworkitemWIs = $transaction.workItems().search().query(&quot;${defectQuery}&quot; ))
+
+                    #foreach($defectworkitemWI in $defectworkitemWIs)
+                      #set($defectworkitemWIObj = $defectworkitemWI.getOldApi())
+                      #set($defectworkitemStatus = $!defectworkitemWI.fields().status().optionId())
+                      #set($defectworkitemId = $!defectworkitemWI.fields().id().get())
+                      #set($testDefectSeverity = $!defectworkitemWIObj.getValue(&quot;testDefectSeverity&quot;).id)
+
+                      #if($defectworkitemStatus == &quot;open&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;open&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;open&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;inProgress&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;inProgress&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;inProgress&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;reopen&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;reopen&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;reopen&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;fixed&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;fixed&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;fixed&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;closed&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;closed&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;closed&quot;, $tmpCnt))
+                      #elseif($defectworkitemStatus == &quot;monitor&quot;)
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;monitor&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;monitor&quot;, $tmpCnt))
+                      #end
+                      #set($defectId = $resultMap.get(&quot;${defectworkitemStatus}&quot;))
+                      #set($defectId = &quot;${defectId} $defectworkitemId&quot;)
+                      #set($ret = $resultMap.put(&quot;${defectworkitemStatus}&quot;, &quot;$defectId&quot;))
+
+                      #set($tmpCnt = $math.add($resultCountMap.get(&quot;total&quot;), 1))
+                      #set($ret = $resultCountMap.put(&quot;total&quot;, $tmpCnt))
+                      #set($defectId = $resultMap.get(&quot;total&quot;))
+                      #set($defectId = &quot;${defectId} $defectworkitemId&quot;)
+                      #set($ret = $resultMap.put(&quot;total&quot;, &quot;$defectId&quot;))                                
+                    #end
+                	&lt;tr&gt;
+                    	&lt;td&gt; $math.add($rowIndex, 1)&lt;/td&gt;
+                        &lt;td&gt; $qualificationTestworkitemWI.fields().id().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+                        &lt;td style=&quot;text-align: left;&quot;&gt; $qualificationTestName &lt;/td&gt;
+                        &lt;td style=&quot;text-align: center;&quot;&gt; $qualificationTestworkitemWI.fields().author().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+					    &lt;td style=&quot;text-align: center;&quot;&gt; $qualificationTestworkitemWI.fields().assignee().render().withLinks().openLinksInNewWindow()&lt;/td&gt;
+                        &lt;td style=&quot;text-align: center;&quot;&gt;$date.format(&#39;yyyy-MM-dd&#39;, $qualificationTestCreated)&lt;/td&gt;
+                    
+                       &lt;td style=&quot;text-align: center;#if($qualificationTestEventSeq == 2) background-color: #E8E8E8 ; #end&quot;&gt;$qualificationTestEventSeq&lt;/td&gt;
+                        &lt;td style=&quot;text-align: center;#if($qualificationTestStatus == &quot;open&quot;) background-color: orange ;#elseif($qualificationTestStatus == &quot;Reopen&quot;) background-color: orange;#elseif($qualificationTestStatus == &quot;request&quot;) background-color: Orange;#elseif($qualificationTestStatus == &quot;receipt&quot;) background-color: orange; #elseif($qualificationTestStatus == &quot;plan&quot;) background-color: orange; #elseif($qualificationTestStatus == &quot;testing&quot;) background-color: orange; #elseif($qualificationTestStatus == &quot;result&quot;) background-color: orange; #elseif($qualificationTestStatus == &quot;review&quot;) background-color: orange;#elseif($qualificationTestStatus == &quot;inApproval&quot;) background-color: orange; #end&quot;&gt;$qualificationTestStatus&lt;/td&gt;
+                       
+                                            
+                        
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;open&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;open&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;open&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;inProgress&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;inProgress&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;inProgress&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;reopen&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;reopen&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;reopen&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;fixed&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;fixed&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;fixed&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;closed&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;closed&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;closed&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;monitor&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;monitor&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;monitor&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;
+                        &lt;td&gt;
+                        	#if($resultCountMap.get(&quot;total&quot;) == 0)
+                            	0
+                            #else
+                              #set($idList =  $resultMap.get(&quot;total&quot;))
+                              #set($link = $transaction.context().createPortalLink().repository().workItems().query(&quot;type:testDefect AND id:($idList)&quot;))
+                              &lt;a href=&quot;$link&quot; target=&quot;_blank&quot; style=&quot;display: block; width: 100%; height: 100%; text-align: center;&quot;&gt;
+                                      $resultCountMap.get(&quot;total&quot;)
+                              &lt;/a&gt;
+                            #end
+                        &lt;/td&gt;                             
+                    &lt;/tr&gt;
+                    #set($rowIndex = $rowIndex + 1)
+                #end
+            &lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client1"></p>
+  <div id="polarion_client21" class="polarion-rp-widget-part" data-widget="goToTop">
+    <span class="polarion-rp-widget-parameters"></span>
+  </div>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_client146" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;&quot;&gt;Detail Remain Software Issue Status&lt;/h2&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <div id="polarion_client144" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;background-color: red;&quot;&gt;Open&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.table&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    
+    &lt;sub id=&quot;dataSet&quot;&gt;
+      
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      
+      &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+      
+      &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+      
+      &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND status:open AND InitialMR.KEY:Initial&lt;/sub&gt;
+      
+      &lt;sub id=&quot;children&quot;&gt;
+        
+        &lt;sub id=&quot;columns&quot;&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;id&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;title&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;model_name&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;soc&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;BuildNumber&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;created&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;updated&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;dueDate&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;testDefectSeverity&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;status&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;reproducibility&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;bugDescription&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;defectResolution&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;FixBuildNumber&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;assignee&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+        &lt;sub id=&quot;sortBy&quot;&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;created&lt;/sub&gt;
+            
+            &lt;sub id=&quot;descending&quot;&gt;false&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    &lt;sub id=&quot;propertiesSidebarFields&quot;&gt;&lt;/sub&gt;
+      
+    &lt;sub id=&quot;advanced&quot;&gt;
+      
+      &lt;sub id=&quot;top&quot;&gt;20&lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client153"></p>
+  <div id="polarion_client7" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters" style="display: none;">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;background-color: Maroon;&quot;&gt;Re-Open&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.table&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    
+    &lt;sub id=&quot;dataSet&quot;&gt;
+      
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      
+      &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+      
+      &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+      
+      &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND status:reopen AND InitialMR.KEY:Initial&lt;/sub&gt;
+      
+      &lt;sub id=&quot;children&quot;&gt;
+        
+        &lt;sub id=&quot;columns&quot;&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;id&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;title&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;model_name&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;soc&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;BuildNumber&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;created&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;updated&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;dueDate&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;testDefectSeverity&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;status&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;reproducibility&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;bugDescription&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;defectResolution&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;FixBuildNumber&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;assignee&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+        &lt;sub id=&quot;sortBy&quot;&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;created&lt;/sub&gt;
+            
+            &lt;sub id=&quot;descending&quot;&gt;false&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    &lt;sub id=&quot;propertiesSidebarFields&quot;&gt;&lt;/sub&gt;
+      
+    &lt;sub id=&quot;advanced&quot;&gt;
+      
+      &lt;sub id=&quot;top&quot;&gt;20&lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client4"></p>
+  <div id="polarion_client147" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;background-color: Orange;&quot;&gt;In Progress&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.table&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    
+    &lt;sub id=&quot;dataSet&quot;&gt;
+      
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      
+      &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+      
+      &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+      
+      &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND status:inProgress AND InitialMR.KEY:Initial&lt;/sub&gt;
+      
+      &lt;sub id=&quot;children&quot;&gt;
+        
+        &lt;sub id=&quot;columns&quot;&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;id&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;title&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;model_name&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;soc&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;BuildNumber&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;created&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;updated&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;dueDate&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;testDefectSeverity&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;status&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;reproducibility&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;bugDescription&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;defectResolution&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;FixBuildNumber&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;assignee&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+        &lt;sub id=&quot;sortBy&quot;&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;created&lt;/sub&gt;
+            
+            &lt;sub id=&quot;descending&quot;&gt;false&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    &lt;sub id=&quot;propertiesSidebarFields&quot;&gt;&lt;/sub&gt;
+      
+    &lt;sub id=&quot;advanced&quot;&gt;
+      
+      &lt;sub id=&quot;top&quot;&gt;20&lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_client65"></p>
+  <div id="polarion_client149" class="polarion-rp-widget-part" data-widget="com.polarion.scriptBlock">
+    <span class="polarion-rp-widget-parameters">
+      <sub id="script">
+        <sub id="script" style="white-space:pre;">&lt;h2 style=&quot;text-align: center;background-color: Yellow;&quot;&gt;Monitoring&lt;/h2&gt;
+&lt;div class=&quot;polarion-rp-widget-part&quot; data-widget=&quot;com.polarion.table&quot;&gt;
+  &lt;span class=&quot;polarion-rp-widget-parameters&quot;&gt;
+    
+    &lt;sub id=&quot;dataSet&quot;&gt;
+      
+      &lt;sub id=&quot;prototype&quot;&gt;WorkItem&lt;/sub&gt;
+      
+      &lt;sub id=&quot;subtype&quot;&gt;testDefect&lt;/sub&gt;
+      
+      &lt;sub id=&quot;queryType&quot;&gt;lucene&lt;/sub&gt;
+      
+      &lt;sub id=&quot;luceneQuery&quot;&gt;labels:ICSW AND status:monitor AND InitialMR.KEY:Initial&lt;/sub&gt;
+      
+      &lt;sub id=&quot;children&quot;&gt;
+        
+        &lt;sub id=&quot;columns&quot;&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;id&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;title&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;model_name&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;soc&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;BuildNumber&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;created&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;updated&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;dueDate&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;testDefectSeverity&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;status&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;reproducibility&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;bugDescription&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;defectResolution&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;FixBuildNumber&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;assignee&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+        &lt;sub id=&quot;sortBy&quot;&gt;
+          
+          &lt;sub&gt;
+            
+            &lt;sub id=&quot;id&quot;&gt;created&lt;/sub&gt;
+            
+            &lt;sub id=&quot;descending&quot;&gt;false&lt;/sub&gt;
+            
+          &lt;/sub&gt;
+          
+        &lt;/sub&gt;
+        
+      &lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    &lt;sub id=&quot;propertiesSidebarFields&quot;&gt;&lt;/sub&gt;
+      
+    &lt;sub id=&quot;advanced&quot;&gt;
+      
+      &lt;sub id=&quot;top&quot;&gt;20&lt;/sub&gt;
+      
+    &lt;/sub&gt;
+    
+  &lt;/span&gt;
+&lt;/div&gt;</sub>
+      </sub>
+    </span>
+  </div>
+  <p id="polarion_16"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<span id="polarion-rp-parameters">
+  <sub id="SoC" data-label="SoC" data-type="String"></sub><sub id="K25Lp" data-label="K25Lp" data-type="String" data-inherit="SoC"></sub>
+</span>]]>
+</field>
+
+<field id="title">LGERC SW Issue Monitoring</field>
+
+</rich-page>
